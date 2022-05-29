@@ -1,1 +1,6 @@
+Solution 1 is just squaring and then sorting.
+
 Solution 2 is the most optimed soltion by time. As array is sorted so it uses two pointer pattern to solve the problem.
+
+Solution 3 uses same optimal complexity but uses extra space to store the negative numbers and then compare last negative number to current array index 
+while inserting smallest number to the result array.

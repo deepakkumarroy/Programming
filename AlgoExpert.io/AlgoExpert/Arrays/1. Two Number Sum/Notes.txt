@@ -1,3 +1,5 @@
+Solution 1 is just brute force
+
 Solution 2 is having best time complexity. It uses hashSet to reduce the redundancy and optimize the solution.
 
 Solution 3 is having best space complexity. It uses sorting and 2 pointer pattern to use constant space.

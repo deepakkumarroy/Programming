@@ -1,1 +1,1 @@
-Solution 1 and Solution 2 are same just using different type of loops
+Solution 1 and Solution 2 are same just using different type of loops. Both uses two pointer pattern to compare both arrays.
