@@ -1,0 +1,20 @@
+import java.util.*;
+
+class Program {
+// O(n) time | O(n) space
+  public int[] sortedSquaredArray(int[] array) {
+    int[] sortedSquares = new int[array.length];
+    int smallerValueIdx = 0;
+    int largerValueIdx = array.length - 1;
+    for(int idx = array.length - 1; idx >= 0; idx--) {
+      if(Math.abs(array[smallerValueIdx]) > Math.abs(array[largerValueIdx])) {
+        sortedSquares[idx] = array[smallerValueIdx] * array[smallerValueIdx];
+        smallerValueIdx++;
+      } else {
+        sortedSquares[idx] = array[largerValueIdx] * array[largerValueIdx];
+        largerValueIdx--;
+      }
+    }
+    return sortedSquares;
+  }
+}

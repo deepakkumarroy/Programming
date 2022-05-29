@@ -1,0 +1,1 @@
+Solution 2 is the most optimed soltion by time. As array is sorted so it uses two pointer pattern to solve the problem.

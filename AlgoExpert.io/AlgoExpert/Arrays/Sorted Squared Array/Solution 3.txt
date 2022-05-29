@@ -1,0 +1,34 @@
+import java.util.*;
+
+class Program {
+// My Solution
+// O(n) time | O(n) space
+  public int[] sortedSquaredArray(int[] array) {
+    int[] result = new int[array.length];
+    List<Integer> neg = new ArrayList<Integer>();
+    int arrPtr = 0;
+    int resPtr = 0;
+    while(arrPtr < array.length) {
+      if(array[arrPtr] < 0) {
+        neg.add(array[arrPtr] * -1);
+        arrPtr++;
+      } else {
+        int lastNegIdx = neg.size() - 1;
+        if(lastNegIdx >= 0 && array[arrPtr] > neg.get(lastNegIdx)) {
+          result[resPtr] = neg.get(lastNegIdx) * neg.get(lastNegIdx);
+          neg.remove(lastNegIdx);
+          resPtr++;
+        } else {
+          result[resPtr] = array[arrPtr] * array[arrPtr];
+          arrPtr++;
+          resPtr++;
+        }
+      }
+    }
+    for(int i = neg.size() - 1; i >= 0; i--) {
+      result[resPtr] = neg.get(i) * neg.get(i);
+      resPtr++;
+    }
+    return result;
+  }
+}
