@@ -1,0 +1,29 @@
+One way to solve this problem will be brute force that is iterate through all the numbers and try to create that value through array. That will be
+very time consuming and complex to do.
+
+Solution 1 - The trick to solve this question optimally is to observe that you can make all the changes upto you encounter a number that is changes + 1 greater.
+
+Algorithm - 
+
+U = {1}    V = 1
+C = 1
+
+if we add V to the U set and if 
+
+V > C + 1 
+
+then we can't make C + 1 change. 
+
+But if
+
+V <= C + 1
+
+then we can make any change upto C + V.
+
+U = Set of coins I have
+C = Changes I can provide upto
+V = Coin to be added in set of coins
+
+So, in this case V = 1. Hence we can provide change upto 2 but can't provide 2 + 1.
+
+In another case if V = 3. Then V > C + 1, that means we can't provide change of 1 + 1.
