@@ -1,0 +1,4 @@
+Solution 1 & 3 are having same logic just having different type of loops. They both break 
+loop if array is already sorted or becomes sorted in between.
+
+Solution 2 doesn't breaks loop if array becomes sorted hence have worst time complexity.

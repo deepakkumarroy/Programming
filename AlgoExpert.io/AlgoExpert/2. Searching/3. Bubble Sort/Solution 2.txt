@@ -1,0 +1,20 @@
+import java.util.*;
+
+class Program {
+  // My Solution
+  // Best: O(n^2) time | O(1) space
+  // Average: O(n^2) time | O(1) space
+  // Worst: O(n^2) time | O(1) space
+  public static int[] bubbleSort(int[] array) {
+    for(int idx = 0; idx < array.length; idx++) {
+      for(int idy = 0; idy < array.length - 1 - idx; idy++) {
+        if(array[idy] > array[idy + 1]) {
+          int temp = array[idy];
+          array[idy] = array[idy + 1];
+          array[idy + 1] = temp;
+        }
+      }
+    }
+    return array;
+  }
+}
